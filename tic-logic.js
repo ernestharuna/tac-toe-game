@@ -46,11 +46,8 @@ window.onload = function () {
       } else {
          myTic = 'O';
       }
-      if (params.clicked == false) {
-         params.clicked = true;
-      }
-
-      params.player = myTic;    
+      params.clicked = true;
+      params.player = myTic;
       params.box.innerHTML = myTic; // inputes either X or O in box
       xyz.push(params.player)
       auxFunction(params)
@@ -60,23 +57,88 @@ window.onload = function () {
          console.log(params.clicked) // true or false
          console.log(params.player) // X or O
          console.log(xyz) // array
-         if(xyz.length == 9){
+         if (xyz.length == 9) {
             alert('GAME OVER');
-            checker();
          }
       }
    }
 
-   function checker(){
-      if(box_a1.player && box_a2.player && box_a3.player == "X"){
-         alert(`${box_a1.player} has WON!`)
-      } else if (box_a1.player && box_a2.player && box_a3.player == "O") {
-         
-      } 
+   function checker() {
+      // row 1
+      if (box_a1.player == 'X' && box_a2.player == 'X' && box_a3.player == "X") {
+         alert(`${box_a1.player} has WON!`);
+         window.location.reload();
+      } else if (box_a1.player == "O" && box_a2.player == "O" && box_a3.player == "O") {
+         alert(`${box_a1.player} has WON!`);
+         window.location.reload();
+      }
+
+      //row  2
+      else if (box_b1.player == "X" && box_b2.player == "X" && box_b3.player == "X") {
+         alert(`${box_a1.player} has WON!`);
+         window.location.reload();
+      } else if (box_b1.player == "O" && box_b2.player == "O" && box_b3.player == "O") {
+         alert(`${box_a1.player} has WON!`);
+         window.location.reload();
+      }
+
+      //row 3
+      else if (box_c1.player == "O" && box_c2.player == "O" && box_c3.player == "O") {
+         alert(`${box_a1.player} has WON!`);
+         window.location.reload();
+      } else if (box_c1.player == "X" && box_c2.player == "X" && box_c3.player == "X") {
+         alert(`${box_c1.player} has WON!`);
+         window.location.reload();
+      }
+
+      // diagonal L to R      
+      else if (box_a1.player == "O" && box_b2.player == "O" && box_c3.player == "O") {
+         alert(`${box_a1.player} has WON!`);
+         window.location.reload();
+      } else if (box_a1.player == "X" && box_b2.player == "X" && box_c3.player == "X") {
+         alert(`${box_a1.player} has WON!`);
+         window.location.reload();
+      }
+
+      //diagonal R to L
+      else if (box_a3.player == "O" && box_b2.player == "O" && box_c1.player == "O") {
+         alert(`${box_a1.player} has WON!`);
+         window.location.reload();
+      } else if (box_a3.player == "X" && box_b2.player == "X" && box_c1.player == "X") {
+         alert(`${box_a3.player} has WON!`);
+         window.location.reload();
+      }
+
+
+      // first column
+      else if (box_a1.player == "O" && box_b1.player == "O" && box_c1.player == "O") {
+         alert(`${box_a1.player} has WON!`);
+         window.location.reload();
+      } else if (box_a1.player == "X" && box_b1.player == "X" && box_c1.player == "X") {
+         alert(`${box_a1.player} has WON!`);
+         window.location.reload();
+      }
+      
+      // second column
+      else if (box_a2.player == "O" && box_b2.player == "O" && box_c2.player == "O") {
+         alert(`${box_a2.player} has WON!`);
+         window.location.reload();
+      }else if (box_a2.player == "X" && box_b2.player == "X" && box_c2.player == "X") {
+         alert(`${box_a2.player} has WON!`);
+         window.location.reload();
+      }
+
+      else if (box_a3.player == "O" && box_b3.player == "O" && box_c3.player == "O") {
+         alert(`${box_a3.player} has WON!`);
+         window.location.reload();
+      }else if (box_a3.player == "X" && box_b3.player == "X" && box_c3.player == "X") {
+         alert(`${box_a3.player} has WON!`);
+         window.location.reload();
+      }
    }
    // Onclick function for each botton
    box_a1.box.addEventListener('click', function toggle() {
-     toggleUser(box_a1);
+      toggleUser(box_a1);
       box_a1.box.removeEventListener('click', toggle)
    });
 
