@@ -84,7 +84,7 @@ window.onload = function () {
 
       //row 3
       else if (box_c1.player == "O" && box_c2.player == "O" && box_c3.player == "O") {
-         alert(`${box_a1.player} has WON!`);
+         alert(`${box_c1.player} has WON!`);
          window.location.reload();
       } else if (box_c1.player == "X" && box_c2.player == "X" && box_c3.player == "X") {
          alert(`${box_c1.player} has WON!`);
@@ -102,13 +102,12 @@ window.onload = function () {
 
       //diagonal R to L
       else if (box_a3.player == "O" && box_b2.player == "O" && box_c1.player == "O") {
-         alert(`${box_a1.player} has WON!`);
+         alert(`${box_a3.player} has WON!`);
          window.location.reload();
       } else if (box_a3.player == "X" && box_b2.player == "X" && box_c1.player == "X") {
          alert(`${box_a3.player} has WON!`);
          window.location.reload();
       }
-
 
       // first column
       else if (box_a1.player == "O" && box_b1.player == "O" && box_c1.player == "O") {
@@ -128,6 +127,7 @@ window.onload = function () {
          window.location.reload();
       }
 
+      //third column
       else if (box_a3.player == "O" && box_b3.player == "O" && box_c3.player == "O") {
          alert(`${box_a3.player} has WON!`);
          window.location.reload();
@@ -181,14 +181,4 @@ window.onload = function () {
       toggleUser(box_c3);
       box_c3.box.removeEventListener('click', toggle);
    });
-}
-
-
-window.onunload = function () {
-   let leave = confirm("Do you wanna play more?!");
-   if (leave == true) {
-      alert("Great!")
-   } else {
-      alert("Thanks for playing");
-   }
 }
