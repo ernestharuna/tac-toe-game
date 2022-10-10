@@ -66,7 +66,7 @@ window.onload = function () {
 
       //row  2
       else if (box_b1.player == "X" && box_b2.player == "X" && box_b3.player == "X") {
-         alert(`${box_a1.player} has WON!`);
+         alert(`${box_b1.player} has WON!`);
       } else if (box_b1.player == "O" && box_b2.player == "O" && box_b3.player == "O") {
          alert(`${box_a1.player} has WON!`);
       }
