@@ -12,27 +12,18 @@ window.onload = function () {
    document.getElementById('p2').innerHTML = user_2;
 
    // first row
-   // let box_a1 = [document.getElementById('a1'), false];
    let box_a1 = { box: document.getElementById('a1'), clicked: false };
-   // let box_a2 = [document.getElementById('a2'), false];
    let box_a2 = { box: document.getElementById('a2'), clicked: false };
-   // let box_a3 = [document.getElementById('a3'), false];
    let box_a3 = { box: document.getElementById('a3'), clicked: false };
 
    // second row
-   // let box_b1 = [document.getElementById('b1'), false];
    let box_b1 = { box: document.getElementById('b1'), clicked: false };
-   // let box_b2 = [document.getElementById('b2'), false];
    let box_b2 = { box: document.getElementById('b2'), clicked: false };
-   // let box_b3 = [document.getElementById('b3'), false];
    let box_b3 = { box: document.getElementById('b3'), clicked: false };
 
    // third row
-   // let box_c1 = [document.getElementById('c1'), false];
    let box_c1 = { box: document.getElementById('c1'), clicked: false };
-   // let box_c2 = [document.getElementById('c2'), false];
    let box_c2 = { box: document.getElementById('c2'), clicked: false };
-   // let box_c3 = [document.getElementById('c3'), false];
    let box_c3 = { box: document.getElementById('c3'), clicked: false };
 
    // switch turns and X, O
@@ -43,8 +34,10 @@ window.onload = function () {
       UserMode = !UserMode;
       if (UserMode == true) {
          myTic = 'X';
+         params.box.style.backgroundColor = '#21321F';
       } else {
          myTic = 'O';
+         params.box.style.backgroundColor = '#32241F';
       }
       params.clicked = true;
       params.player = myTic;
