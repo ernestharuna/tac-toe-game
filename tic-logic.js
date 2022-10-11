@@ -52,44 +52,59 @@ window.onload = function () {
          console.log(xyz) // array
          if (xyz.length == 9) {
             alert('GAME OVER');
+            resetFunc()
          }
       }
+   }
+
+   function resetFunc() {
+      let reset = setTimeout(function () { window.location.reload() }, 2500);
    }
 
    function checker() {
       // row 1
       if (box_a1.player == 'X' && box_a2.player == 'X' && box_a3.player == "X") {
          alert(`${box_a1.player} has WON!`);
+         resetFunc()
       } else if (box_a1.player == "O" && box_a2.player == "O" && box_a3.player == "O") {
          alert(`${box_a1.player} has WON!`);
+         resetFunc()
       }
 
       //row  2
       else if (box_b1.player == "X" && box_b2.player == "X" && box_b3.player == "X") {
          alert(`${box_b1.player} has WON!`);
+         resetFunc()
       } else if (box_b1.player == "O" && box_b2.player == "O" && box_b3.player == "O") {
          alert(`${box_a1.player} has WON!`);
+         resetFunc()
       }
 
       //row 3
       else if (box_c1.player == "O" && box_c2.player == "O" && box_c3.player == "O") {
          alert(`${box_c1.player} has WON!`);
+         resetFunc()
       } else if (box_c1.player == "X" && box_c2.player == "X" && box_c3.player == "X") {
          alert(`${box_c1.player} has WON!`);
+         resetFunc()
       }
 
       // diagonal L to R      
       else if (box_a1.player == "O" && box_b2.player == "O" && box_c3.player == "O") {
          alert(`${box_a1.player} has WON!`);
+         resetFunc()
       } else if (box_a1.player == "X" && box_b2.player == "X" && box_c3.player == "X") {
          alert(`${box_a1.player} has WON!`);
+         resetFunc()
       }
 
       //diagonal R to L
       else if (box_a3.player == "O" && box_b2.player == "O" && box_c1.player == "O") {
          alert(`${box_a3.player} has WON!`);
+         resetFunc()
       } else if (box_a3.player == "X" && box_b2.player == "X" && box_c1.player == "X") {
          alert(`${box_a3.player} has WON!`);
+         resetFunc()
       }
 
       // first column
@@ -98,19 +113,23 @@ window.onload = function () {
       } else if (box_a1.player == "X" && box_b1.player == "X" && box_c1.player == "X") {
          alert(`${box_a1.player} has WON!`);
       }
-      
+
       // second column
       else if (box_a2.player == "O" && box_b2.player == "O" && box_c2.player == "O") {
          alert(`${box_a2.player} has WON!`);
-      }else if (box_a2.player == "X" && box_b2.player == "X" && box_c2.player == "X") {
+         resetFunc()
+      } else if (box_a2.player == "X" && box_b2.player == "X" && box_c2.player == "X") {
          alert(`${box_a2.player} has WON!`);
+         resetFunc()
       }
 
       //third column
       else if (box_a3.player == "O" && box_b3.player == "O" && box_c3.player == "O") {
          alert(`${box_a3.player} has WON!`);
-      }else if (box_a3.player == "X" && box_b3.player == "X" && box_c3.player == "X") {
+         resetFunc()
+      } else if (box_a3.player == "X" && box_b3.player == "X" && box_c3.player == "X") {
          alert(`${box_a3.player} has WON!`);
+         resetFunc()
       }
    }
    // Onclick function for each botton
